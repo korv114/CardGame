@@ -27,6 +27,10 @@ public class Card
     }
  }
    
-   
+    public Card(int Value, Suits Suit)
+    {
+        this.Value = Value;
+        this.Suit = Suit;
+    }
    
 }
