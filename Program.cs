@@ -68,4 +68,9 @@ public class Card
         }
     }
    
+public class Deck
+{
+    public List<Card> Cards = new List<Card>();
+}
+    
 }
