@@ -90,6 +90,30 @@ public class Deck
             }
             Console.WriteLine("Cards: " + Cards.Count);
          }
+    
+   public void ShuffleDeck()
+         {
+            Random rand = new Random();
+            for (int i = this.Cards.Count - 1; i > 0; i--)
+            {
+            int randomIndex = rand.Next(0, i + 1);
+
+            Card temp = this.Cards[i];
+            this.Cards[i] = this.Cards[randomIndex];
+            this.Cards[randomIndex] = temp;
+            }
+         }
+}
+    
+static void Main(string[] args)
+{
+
+        Deck deck = new Deck();
+        deck.FillDeck();
+        deck.ShuffleDeck();
+        deck.PrintDeck();
+
+    }
 }
     
 }
