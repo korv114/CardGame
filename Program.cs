@@ -71,6 +71,25 @@ public class Card
 public class Deck
 {
     public List<Card> Cards = new List<Card>();
+    
+    public void FillDeck()
+        {
+          for (int i = 0; i < 52; i++)
+          {
+             Card.Suits suit = (Card.Suits)((decimal)i/13);
+             int val = i%13 + 2;
+             Cards.Add(new Card(val, suit));
+          }
+         }
+
+    public void PrintDeck()
+        {
+            foreach(Card card in this.Cards)
+            {
+                Console.WriteLine(card.Name);
+            }
+            Console.WriteLine("Cards: " + Cards.Count);
+         }
 }
     
 }
